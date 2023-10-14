@@ -13,6 +13,10 @@ const CountdownTimer = () => {
       clearInterval(countdownInterval);
     };
   }, []);
+    
+    if (timeRemaining < 0) {
+        setTimeRemaining(0)
+    }
 
   return (
     <div
@@ -27,10 +31,10 @@ const CountdownTimer = () => {
         padding: '10px',
         borderRadius: '5px',
         zIndex: '10',
-        fontSize: '24px',
+        fontSize: '20px',
       }}
     >
-      Offer ends in {timeRemaining} seconds!
+      {timeRemaining !== 0 || timeRemaining < 0? `Free access ends in ${timeRemaining} seconds!` : `Time Up`}
     </div>
   );
 };
