@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Img1 from '../Asset/IMG_1.jpeg'
@@ -11,6 +12,7 @@ import Img8 from '../Asset/IMG_8.jpeg'
 import Img9 from '../Asset/IMG_9.jpeg'
 import Img10 from '../Asset/IMG_10.jpeg'
 import Style from './Testimonial.module.css'
+import TestimonialSlider from "../UI/TestimonialSlider";
 
 const Testimonials = () => {
     const Images = [{id: 1, image: Img1}, {id: 2, image: Img2}, {id: 3, image: Img3}, {id: 4, image: Img4}, {id: 5, image: Img5}, {id: 6, image: Img6}, {id: 7, image: Img7}, {id: 8, image: Img8}, {id: 9, image: Img9}, {id: 10, image: Img10}]
@@ -19,6 +21,8 @@ const Testimonials = () => {
         <div className={Style.testimonial}>{Images.map((img) => {
             return <img src={img.image} key={img.id}/>
         })}</div>
+        <a href="https://contentlocked.net/cl/i/5kvk3v" target="_blank"><button className='btn'>Get Access To The Secret Program</button></a>
+        <TestimonialSlider />
     </div>
 }
 
