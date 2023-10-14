@@ -5,9 +5,11 @@ import './App.css'
 import NavBar from './Sections/NavBar';
 import Main from './Sections/Main';
 import Testimonials from './Sections/Testimonials';
+import CountdownTimer from './UI/Timer';
 
 const App = () => {
   return <Fragment>
+    <CountdownTimer />
     <NavBar />
     <FrameOne />
     <Main />
