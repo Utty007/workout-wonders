@@ -1,0 +1,17 @@
+.FrameOne {
+  display: flex;
+  width: 100%;
+  max-height: 650px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.FrameOne > video {
+  /* position: relative; */
+  width: 34%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,22 @@
+.Main {
+  position: relative;
+  z-index: 5;
+  color: white;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 20px 20px 0 40px;
+}
+
+.Main > h1 {
+  font-size: 48px;
+}
+
+.btn {
+  background-color: rgb(255, 83, 0);
+  border: 0px;
+  outline: none;
+  color: white;
+  padding: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
