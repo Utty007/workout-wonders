@@ -10,8 +10,8 @@ const FrameOne = () => {
     return <div className={Style.FrameOne}>
         <Overlay />
         <video src={VideoOne} autoPlay={true} loop={true} muted={true}/>
-        <video src={VideoThree} autoPlay={true} loop={true} muted={true}/>
-        <video src={VideoTwo} autoPlay={true} loop={true} />
+        <video src={VideoThree} autoPlay={true} className={Style.displayNone} loop={true} muted={true}/>
+        <video src={VideoTwo} autoPlay={true} className={Style.displayOff} loop={true} muted={true} />
     </div>
 }
 
