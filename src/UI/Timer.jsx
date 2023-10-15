@@ -23,14 +23,13 @@ const CountdownTimer = () => {
       style={{
         position: 'fixed',
         bottom: '20px', // Adjust this value to change the vertical position
-        // left: '80%',
-        transform: 'translateX(-20%)',
-        right: '0',
+        right: '5%',
         backgroundColor: 'rgb(255, 83, 0)',
         color: 'white',
         padding: '10px',
         borderRadius: '5px',
         zIndex: '10',
+        boxShadow: '1px 0px 10px rgb(0 0 0 / 20%)',
         fontSize: '20px',
       }}
     >
