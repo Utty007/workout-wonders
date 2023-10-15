@@ -1,9 +1,9 @@
 .Testimonials {
   position: absolute;
   z-index: 5;
-  width: 90%;
+  width: 80%;
   margin: auto;
-  left: 5%;
+  left: 10%;
   top: 650px;
   margin-bottom: 40px;
 }
@@ -28,8 +28,8 @@
   height: 400px;
 }
 
-/* @media screen and (max-width: 425px) {
-  .Testimonials {
-    top: 150px;
+@media screen and (max-width: 425px) {
+  .Testimonials > h2 {
+    font-size: 32px;
   }
-} */
+}
