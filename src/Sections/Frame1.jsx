@@ -10,7 +10,9 @@ import audio from '../Asset/audio.mp3'
 const FrameOne = () => {
     return <div className={Style.FrameOne}>
         <Overlay />
-        <audio autoPlay={true} src={audio} loop={true} />
+        <audio autoPlay={true}  loop={true}>
+            <source src={audio} type='audio/mp3' />
+        </audio>
         <video src={VideoOne} autoPlay={true} loop={true} muted={true}/>
         <video src={VideoThree} autoPlay={true} className={Style.displayNone} loop={true} muted={true}/>
         <video src={VideoTwo} autoPlay={true} className={Style.displayOff} loop={true} muted={true} />
