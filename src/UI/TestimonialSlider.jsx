@@ -86,7 +86,7 @@ const TestimonialSlider = () => {
         },
       },
       {
-        breakpoint: 480, // Mobile
+        breakpoint: 500, // Mobile
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

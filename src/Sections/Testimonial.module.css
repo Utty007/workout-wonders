@@ -1,8 +1,10 @@
 .Testimonials {
-  position: relative;
+  position: absolute;
   z-index: 5;
-  width: 100%;
-  top: 130px;
+  width: 90%;
+  margin: auto;
+  left: 5%;
+  top: 650px;
   margin-bottom: 40px;
 }
 
@@ -26,8 +28,8 @@
   height: 400px;
 }
 
-@media screen and (max-width: 425px) {
+/* @media screen and (max-width: 425px) {
   .Testimonials {
     top: 150px;
   }
-}
+} */
