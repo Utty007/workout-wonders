@@ -22,6 +22,7 @@ const Testimonials = () => {
             return <img src={img.image} key={img.id}/>
         })}</div>
         <a href="https://contentlocked.net/cl/i/5kvk3v" target="_blank"><button className='btn'>Get Access To The Secret Program</button></a>
+        <h2>See What People Have To Say</h2>
         <TestimonialSlider />
     </div>
 }

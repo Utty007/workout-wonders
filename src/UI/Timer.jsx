@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 
-const CountdownTimer = () => {
-  const [timeRemaining, setTimeRemaining] = useState(120);
+const CountdownTimer = ({ onTimerComplete }) => {
+  const [timeRemaining, setTimeRemaining] = useState(10);
 
   useEffect(() => {
     const countdownInterval = setInterval(() => {
@@ -13,14 +14,15 @@ const CountdownTimer = () => {
       clearInterval(countdownInterval);
     };
   }, []);
-    
-    if (timeRemaining < 0) {
-        setTimeRemaining(0)
+
+  useEffect(() => {
+    if (timeRemaining <= 0) {
+      onTimerComplete();
     }
+  }, [timeRemaining, onTimerComplete]);
 
   return (
-    <div
-      style={{
+    <div style={{
         position: 'fixed',
         bottom: '20px', // Adjust this value to change the vertical position
         right: '5%',
@@ -31,9 +33,8 @@ const CountdownTimer = () => {
         zIndex: '10',
         boxShadow: '1px 0px 10px rgb(0 0 0 / 20%)',
         fontSize: '20px',
-      }}
-    >
-      {timeRemaining !== 0 || timeRemaining < 0? `Free access ends in ${timeRemaining} seconds!` : `Time Up`}
+      }}>
+      {timeRemaining !== 0 ? `Free access ends in ${timeRemaining} seconds!` : null}
     </div>
   );
 };

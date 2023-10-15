@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const PopUpCard = ({ name, country, onClose }) => (
+const PopUpCard = ({ name, country, onClick }) => (
   <div
     style={{
       position: 'fixed',
@@ -23,7 +23,7 @@ const PopUpCard = ({ name, country, onClose }) => (
     <div>
       {name} from {country} has gotten free access to the Program
     </div>
-    <button onClick={onClose} style={{ backgroundColor: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}>
+    <button onClick={onClick} style={{ backgroundColor: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}>
       Close
     </button>
   </div>

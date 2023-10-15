@@ -9,10 +9,22 @@ import NavBar from './Sections/NavBar';
 import Main from './Sections/Main';
 import Testimonials from './Sections/Testimonials';
 import CountdownTimer from './UI/Timer';
+import SlideInCard from './UI/SlideInCard';
 
 const App = () => {
   const [showPopUp, setShowPopUp] = useState(true);
   const [currentDataIndex, setCurrentDataIndex] = useState(0);
+
+  const [timerComplete, setTimerComplete] = useState(false);
+
+  const handleTimerComplete = () => {
+    setTimerComplete(true);
+  };
+
+  const onClose = () => {
+    setShowPopUp(false)
+  }
+
 
   const data = [
     { name: 'Mason', country: 'Canada' },
@@ -65,8 +77,9 @@ const App = () => {
 
   return (
     <Fragment>
-      {showPopUp && <PopUpCard {...getRandomData()} />}
-      <CountdownTimer />
+      {showPopUp && <PopUpCard {...getRandomData()} onClick={onClose} />}
+      {timerComplete ? <SlideInCard onClose={() => setTimerComplete(true)} /> : <CountdownTimer onTimerComplete={handleTimerComplete} />}
+      {/* <CountdownTimer /> */}
       <NavBar />
       <FrameOne />
       <Main />
